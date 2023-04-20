@@ -327,6 +327,15 @@ template {
 /* =============
     Base
 ============= */
+.header-footer-grid {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header-footer .";
+}
+.header-footer-grid > div {
+  grid-area: header-footer;
+}
+
 .large-imgs {
   width: 100%;
 }
@@ -361,16 +370,6 @@ textarea {
 /* =============
     Header
 ============= */
-header {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  background-color: red;
-  grid-template-areas: ". header .";
-}
-header > div {
-  grid-area: header;
-}
-
 /* =============
     Footer
 ============= */
@@ -381,9 +380,35 @@ header > div {
 /* =============
     About
 ============= */
+#about {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". about .";
+}
+#about > div {
+  grid-area: about;
+}
+
 /* =============
     Partners
 ============= */
+#partners {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". partners .";
+}
+#partners > div {
+  grid-area: partners;
+}
+
 /* =============
     Request
 ============= */
+#request {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". request .";
+}
+#request > div {
+  grid-area: request;
+}
