@@ -327,7 +327,7 @@ template {
 /* =============
     Base
 ============= */
-img {
+.large-imgs {
   width: 100%;
 }
 
@@ -362,7 +362,13 @@ textarea {
     Header
 ============= */
 header {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
   background-color: red;
+  grid-template-areas: ". header .";
+}
+header > div {
+  grid-area: header;
 }
 
 /* =============
