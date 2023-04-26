@@ -10,4 +10,23 @@
     >div{
         grid-area: partners;
     }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 16px;
+        
+        @include md{
+            grid-template-columns: repeat(2, 1fr);
+       }
+    }
+        
+        li{
+            background-color: gainsboro;
+            list-style: none;
+            padding: 100px 0;
+            text-align: center;
+        }
+    
 }
