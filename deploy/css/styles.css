@@ -393,6 +393,13 @@ textarea {
 #about > div {
   grid-area: about;
 }
+@media (min-width: 1200px) {
+  #about > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 136px;
+  }
+}
 
 /* =============
     Partners
@@ -402,25 +409,49 @@ textarea {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". partners .";
 }
-#partners > div {
+#partners div {
   grid-area: partners;
 }
-#partners ul {
+#partners div ul {
   margin: 0;
   padding: 0;
   display: grid;
   gap: 16px;
 }
-@media (min-width: 768px) {
-  #partners ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-#partners li {
+#partners div ul li {
   background-color: gainsboro;
   list-style: none;
   padding: 100px 0;
   text-align: center;
+}
+@media (min-width: 768px) {
+  #partners div ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  #partners div ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "p1 p1 p1 p2 p2 p3" "p4 p5 p5 p5 p6 p6";
+  }
+  #partners div ul #p1 {
+    grid-area: p1;
+  }
+  #partners div ul #p2 {
+    grid-area: p2;
+  }
+  #partners div ul #p3 {
+    grid-area: p3;
+  }
+  #partners div ul #p4 {
+    grid-area: p4;
+  }
+  #partners div ul #p5 {
+    grid-area: p5;
+  }
+  #partners div ul #p6 {
+    grid-area: p6;
+  }
 }
 
 /* =============

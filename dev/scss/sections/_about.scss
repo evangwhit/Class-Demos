@@ -10,10 +10,19 @@
     @include md{
         grid-template-columns: 12% auto 12%;
     }
-
+    
     >div{
         grid-area: about;
+
+        @include xl{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 136px;
+        }
     }
 
+   
+
+   
 
 }

@@ -7,26 +7,60 @@
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". partners .";
 
-    >div{
+    div{
         grid-area: partners;
-    }
 
-    ul{
-        margin: 0;
-        padding: 0;
-        display: grid;
-        gap: 16px;
-        
-        @include md{
-            grid-template-columns: repeat(2, 1fr);
-       }
-    }
-        
-        li{
-            background-color: gainsboro;
-            list-style: none;
-            padding: 100px 0;
-            text-align: center;
-        }
+        ul{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 16px;
+
+            li{
+                background-color: gainsboro;
+                list-style: none;
+                padding: 100px 0;
+                text-align: center;
+            }
+            
+            @include md{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include xl{
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas: 
+                "p1 p1 p1 p2 p2 p3"
+                "p4 p5 p5 p5 p6 p6";
+
+                #p1{
+                    grid-area: p1;
+                }
     
+                #p2{
+                    grid-area: p2;
+                }
+    
+                #p3{
+                    grid-area: p3;
+                }
+    
+                #p4{
+                    grid-area: p4;
+                }
+    
+                #p5{
+                    grid-area: p5;
+                }
+                
+                #p6{
+                    grid-area: p6;
+                }
+
+            }
+
+
+            
+        }
+    }
 }
