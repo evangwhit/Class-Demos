@@ -390,13 +390,18 @@ textarea {
     grid-template-columns: 12% auto 12%;
   }
 }
+@media (min-width: 1440px) {
+  #about {
+    grid-template-columns: auto 1440px auto;
+  }
+}
 #about > div {
   grid-area: about;
 }
 @media (min-width: 1200px) {
   #about > div {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% auto;
     gap: 136px;
   }
 }
@@ -408,6 +413,11 @@ textarea {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". partners .";
+}
+@media (min-width: 1440px) {
+  #partners {
+    grid-template-columns: auto 1440px auto;
+  }
 }
 #partners div {
   grid-area: partners;
@@ -465,6 +475,16 @@ textarea {
 @media (min-width: 768px) {
   #request {
     grid-template-columns: 12% auto 12%;
+  }
+}
+@media (min-width: 1200px) {
+  #request {
+    grid-template-columns: 20% auto 20%;
+  }
+}
+@media (min-width: 1440px) {
+  #request {
+    grid-template-columns: auto 1440px auto;
   }
 }
 #request > div {
