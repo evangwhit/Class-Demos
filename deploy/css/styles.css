@@ -398,6 +398,38 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  padding: 16px 0;
+}
+@media (min-width: 1440px) {
+  header {
+    padding: 24px 0;
+  }
+}
+header div {
+  display: flex;
+}
+header div nav {
+  margin-left: auto;
+}
+header div nav ul {
+  display: none;
+}
+@media (min-width: 768px) {
+  header div nav ul {
+    display: flex;
+  }
+}
+header div nav button {
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  header div nav button {
+    display: none;
+  }
+}
+
 /* =============
     Footer
 ============= */
@@ -426,14 +458,27 @@ textarea {
 #about > div {
   grid-area: about;
 }
-#about > div h1 {
-  margin-bottom: 16px;
-}
 @media (min-width: 1200px) {
   #about > div {
     display: grid;
     grid-template-columns: 50% auto;
     gap: 136px;
+  }
+}
+#about > div aside {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #about > div aside {
+    margin-bottom: 0;
+  }
+}
+#about > div h1 {
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  #about > div h1 {
+    margin-bottom: 24px;
   }
 }
 

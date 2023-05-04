@@ -17,16 +17,31 @@
     
     >div{
         grid-area: about;
-
-        h1{
-            margin-bottom: 16px;     
-        }
-
+        
         @include xl{
             display: grid;
             grid-template-columns: 50% auto;
             gap: 136px;
         }
+
+        aside{
+            margin-bottom: 24px;
+
+            @include md{
+                margin-bottom: 0;
+            }
+        }
+
+
+        h1{
+            margin-bottom: 16px;     
+
+            @include lg{
+                margin-bottom: 24px;
+            }
+        }
+
+     
     }
 
    
