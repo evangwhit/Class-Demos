@@ -20,5 +20,38 @@
 
     >div{
         grid-area: request;
+
+        h1{
+            margin-bottom: 16px;     
+
+            @include lg{
+                margin-bottom: 24px;
+            }
+        }
+
+        input{
+            border: 1px solid var(--gray);
+            padding: 16px 8px;
+        }
+
+        form{
+            margin-top: 32px;
+
+            @include md{
+                margin-top: 24px;
+            }
+
+            @include lg{
+                margin-top: 32px;
+            }
+            button{
+                background-color: var(--purple);
+                color: var(--white);
+                border: none;
+                padding: 16px 24px;
+            }
+        }
     }
 }
+
+

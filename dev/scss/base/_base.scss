@@ -14,3 +14,20 @@
 .large-imgs {
     width: 100%;
 }
+
+ul{
+    margin: 0;
+    padding: 0;
+
+    li{
+        list-style: none;
+    }
+}
+
+.content-spacing{
+    padding-top: 32px;
+
+    @include md{
+        padding-top: 64px;
+    }
+}

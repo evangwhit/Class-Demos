@@ -21,10 +21,11 @@
             gap: 16px;
 
             li{
-                background-color: gainsboro;
                 list-style: none;
                 padding: 100px 0;
                 text-align: center;
+                border: 1px solid var(--gray);
+                border-radius: 4px;
             }
             
             @include md{

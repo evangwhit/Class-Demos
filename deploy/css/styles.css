@@ -10,9 +10,15 @@ html {
 /* =============
     Variables
 ============= */
+/* ==========
+CSS Variables
+==========*/
 :root {
   --black: #000000;
   --white: #ffffff;
+  --purple: #5B61A2;
+  --gray: #AEB3B7;
+  --grid-margin-mobile: 16px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -340,9 +346,31 @@ template {
   width: 100%;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.content-spacing {
+  padding-top: 32px;
+}
+@media (min-width: 768px) {
+  .content-spacing {
+    padding-top: 64px;
+  }
+}
+
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
@@ -382,7 +410,7 @@ textarea {
 ============= */
 #about {
   display: grid;
-  grid-template-columns: 16px auto 16px;
+  grid-template-columns: var(--grid-margin-mobile) auto var(--grid-margin-mobile);
   grid-template-areas: ". about .";
 }
 @media (min-width: 768px) {
@@ -397,6 +425,9 @@ textarea {
 }
 #about > div {
   grid-area: about;
+}
+#about > div h1 {
+  margin-bottom: 16px;
 }
 @media (min-width: 1200px) {
   #about > div {
@@ -429,10 +460,11 @@ textarea {
   gap: 16px;
 }
 #partners div ul li {
-  background-color: gainsboro;
   list-style: none;
   padding: 100px 0;
   text-align: center;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   #partners div ul {
@@ -489,4 +521,35 @@ textarea {
 }
 #request > div {
   grid-area: request;
+}
+#request > div h1 {
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  #request > div h1 {
+    margin-bottom: 24px;
+  }
+}
+#request > div input {
+  border: 1px solid var(--gray);
+  padding: 16px 8px;
+}
+#request > div form {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  #request > div form {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  #request > div form {
+    margin-top: 32px;
+  }
+}
+#request > div form button {
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+  padding: 16px 24px;
 }
